@@ -1,0 +1,12 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'events/styles.css' %}">
+
+<h1> Kirby's Event Registration System </h1>
+
+<div class="container">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit"> Register </button>
+    </form>
+</div>
